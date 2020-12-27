@@ -13,12 +13,19 @@ class ArticlesController < ApplicationController
     def update 
         @article = Article.find(params[:id])
         if @article.update(article_param)
-            flash[:notice] = "Article was successfully created"
+            flash[:notice] = "Article was successfully updated"
             redirect_to article_path(@article)
           else
             render 'edit'
           end
     end
+
+    def destroy
+        @article = Article.find(params[:id])
+        @article.destroy
+        flash[:notice] = "Article was successfully Deleted"
+        redirect_to articles_path
+    end 
 
     def index
       @articles = Article.all
