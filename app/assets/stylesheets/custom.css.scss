@@ -1,4 +1,4 @@
-$navbar-default-bg: #03522d;
+$navbar-default-bg: #01130a;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -10,6 +10,10 @@ $navbar-default-bg: #03522d;
     letter-spacing: -1px;
     float: left;
     font-weight: bold;
+}
+
+#head {
+    margin-bottom: 30px;
 }
 
 #logo:hover {
